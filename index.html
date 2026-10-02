@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkatesh Betageri | Digital Marketing Specialist</title>
+    <meta name="description" content="Resume and Portfolio of Venkatesh Betageri - Certified Digital Marketing Specialist with 6.5+ years of experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border: #334155;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent: #0284c7;
+            --accent-hover: #0369a1;
+            --border: #e2e8f0;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; }
+        h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--accent); }
+        h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+        p { color: var(--text-secondary); margin-bottom: 1rem; }
+        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--accent-hover); }
+
+        /* Layout */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 5rem 0; }
+
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+        [data-theme="light"] nav { background: rgba(255, 255, 255, 0.8); }
+        
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 1.5rem; max-width: 1100px; margin: 0 auto;
+        }
+        .nav-logo { font-weight: 800; font-size: 1.25rem; color: var(--text-primary); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-secondary); font-weight: 500; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .theme-toggle {
+            background: none; border: none; color: var(--text-primary);
+            font-size: 1.2rem; cursor: pointer;
+        }
+
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            padding-top: 80px;
+        }
+        .hero-content { max-width: 800px; }
+        .hero-tag {
+            display: inline-block; background: var(--bg-secondary);
+            color: var(--accent); padding: 0.5rem 1rem; border-radius: 50px;
+            font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+        .hero h1 span { color: var(--accent); }
+        .hero p { font-size: 1.25rem; max-width: 600px; margin-bottom: 2rem; }
+        
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;
+            transition: all 0.2s; cursor: pointer; border: none; font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); color: #fff; transform: translateY(-2px); }
+        .btn-outline { background: transparent; color: var(--text-primary); border: 1px solid var(--border); }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+        /* Section Headers */
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header p { max-width: 600px; margin: 0 auto; }
+
+        /* Experience Timeline */
+        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+        .timeline::before {
+            content: ''; position: absolute; left: 20px; top: 0; bottom: 0;
+            width: 2px; background: var(--border);
+        }
+        .timeline-item { position: relative; padding-left: 60px; margin-bottom: 3rem; }
+        .timeline-dot {
+            position: absolute; left: 11px; top: 5px; width: 20px; height: 20px;
+            border-radius: 50%; background: var(--accent); border: 4px solid var(--bg-primary);
+        }
+        .timeline-date { font-size: 0.875rem; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; }
+        .timeline-card {
+            background: var(--bg-card); padding: 1.5rem; border-radius: 12px;
+            border: 1px solid var(--border); box-shadow: var(--shadow);
+        }
+        .timeline-card h3 { color: var(--text-primary); }
+        .timeline-card h4 { font-size: 1rem; color: var(--text-secondary); font-weight: 500; margin-bottom: 1rem; }
+        .timeline-card ul { padding-left: 1.2rem; color: var(--text-secondary); }
+        .timeline-card li { margin-bottom: 0.5rem; }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 1.5rem; transition: transform 0.2s;
+        }
+        .project-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .project-card h3 { margin-bottom: 0.5rem; }
+        .project-client { font-size: 0.875rem; color: var(--accent); font-weight: 600; margin-bottom: 1rem; display: block; }
+        .project-card p { font-size: 0.95rem; }
+
+        /* Skills */
+        .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .skill-category h3 { margin-bottom: 1rem; color: var(--text-primary); }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .skill-tag {
+            background: var(--bg-secondary); color: var(--text-primary);
+            padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.875rem;
+            border: 1px solid var(--border);
+        }
+
+        /* Education & Certs */
+        .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .edu-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 1.5rem;
+        }
+        .edu-card h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+        .edu-card p { font-size: 0.9rem; margin-bottom: 0; }
+
+        /* Contact */
+        .contact-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem; max-width: 800px; margin: 0 auto;
+        }
+        .contact-item {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 1.5rem; text-align: center;
+            transition: border-color 0.2s;
+        }
+        .contact-item:hover { border-color: var(--accent); }
+        .contact-item i { font-size: 1.5rem; color: var(--accent); margin-bottom: 1rem; }
+        .contact-item h4 { margin-bottom: 0.5rem; color: var(--text-primary); }
+        .contact-item a, .contact-item p { margin: 0; font-size: 0.95rem; }
+
+        /* Footer */
+        footer {
+            text-align: center; padding: 2rem 0; border-top: 1px solid var(--border);
+            color: var(--text-secondary); font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.25rem; }
+            h2 { font-size: 1.75rem; }
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; width: 100%;
+                background: var(--bg-primary); flex-direction: column;
+                padding: 1rem; border-bottom: 1px solid var(--border);
+            }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .timeline::before { left: 10px; }
+            .timeline-item { padding-left: 40px; }
+            .timeline-dot { left: 1px; width: 18px; height: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">VB.</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="hero-tag">Available for new opportunities</span>
+            <h1>Hi, I'm <span>Venkatesh Betageri</span></h1>
+            <h2 style="font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Certified Digital Marketing Specialist</h2>
+            <p>6.5+ years of experience driving growth through SEO, Paid Ads, Email Marketing, and Analytics. I help businesses scale by crafting data-driven digital strategies that convert.</p>
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get in Touch</a>
+                <!-- Replace 'resume.pdf' with your actual PDF file name in the root directory -->
+                <a href="resume.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-download"></i> Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>A passionate digital marketer with a proven track record of developing and executing successful strategies across technology, automotive, healthcare, and education sectors.</p>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p>Over the years, I have seamlessly navigated the intricate landscapes of digital marketing, producing a spectrum of content that ranges from insightful blog posts and persuasive copy to attention-grabbing social media content. I specialize in SEO, PPC, and marketing automation, leveraging AI tools to achieve maximum ROI with optimal efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Work Experience</h2>
+                <p>My professional journey and key contributions.</p>
+            </div>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Feb 2026 - Present</div>
+                    <div class="timeline-card">
+                        <h3>Freelance | Digital Marketing Professional</h3>
+                        <h4>Independent</h4>
+                        <ul>
+                            <li>Provide end-to-end digital solutions encompassing web development, social media, and performance marketing.</li>
+                            <li>Execute targeted ad campaigns across Google and Meta to drive lead generation and maximize ROI.</li>
+                            <li>Implement marketing automation workflows and email sequences to nurture leads.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jul 2024 - Feb 2026</div>
+                    <div class="timeline-card">
+                        <h3>Digital Marketing Specialist</h3>
+                        <h4>Manipal Academy of Higher Education</h4>
+                        <ul>
+                            <li>Drove performance marketing campaigns (Google, Meta, LinkedIn) for 300+ academic programs.</li>
+                            <li>Managed end-to-end SEO strategy to boost organic visibility and applications.</li>
+                            <li>Analyzed campaign performance using GA4 and Meta Ads Manager to refine targeting and funnel conversion.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Nov 2023 - Jul 2024</div>
+                    <div class="timeline-card">
+                        <h3>Digital Marketing Lead</h3>
+                        <h4>ikonTel Solutions</h4>
+                        <ul>
+                            <li>Managed a team of 8 professionals executing digital marketing for healthcare, tech, and hospitality clients.</li>
+                            <li>Acted as primary point of contact for 15+ clients, ensuring satisfaction and addressing needs.</li>
+                            <li>Conducted SEO and PPC campaigns for lead generation in medical treatments and telecom sectors.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jun 2021 - Jul 2023</div>
+                    <div class="timeline-card">
+                        <h3>Digital Marketing Executive</h3>
+                        <h4>Cumulations</h4>
+                        <ul>
+                            <li>Implemented SEO strategies leading to notable increases in organic traffic and rankings.</li>
+                            <li>Utilized Google and Facebook Ads for highly targeted campaigns, boosting traffic and ROI.</li>
+                            <li>Implemented email marketing automation systems resulting in substantial conversion growth.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jul 2019 - May 2021</div>
+                    <div class="timeline-card">
+                        <h3>Digital Marketing Executive</h3>
+                        <h4>Brilliant Jobs Marketing Agency</h4>
+                        <ul>
+                            <li>Conducted market research and developed marketing strategies for diverse clients.</li>
+                            <li>Created and managed Google Ads, Facebook Ads, and Email campaigns optimized for conversion.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Feb 2019 - Jun 2019</div>
+                    <div class="timeline-card">
+                        <h3>Digital Marketing Intern</h3>
+                        <h4>PluginHive Technologies</h4>
+                        <ul>
+                            <li>Assisted in digital marketing campaigns, social media management, and SEO keyword research.</li>
+                            <li>Created and managed WordPress websites, configuring plugins and themes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Projects</h2>
+                <p>A glimpse of the impactful campaigns and websites I've delivered.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>E-Commerce Website & Ads</h3>
+                    <span class="project-client">Client: Sharada Sarees</span>
+                    <p>Developed a WooCommerce site for selling sarees online and executed initial Facebook ad campaigns to drive early sales.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Quick Commerce Campaign</h3>
+                    <span class="project-client">Client: ClickHubli</span>
+                    <p>Generated 500+ orders during Valentine's week with a ROAS of 14 using highly targeted Meta ads for gifts, cakes, and flowers.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Healthcare Lead Generation</h3>
+                    <span class="project-client">Clients: Invivo, BlueBliss, Punya</span>
+                    <p>Ran PPC lead generation campaigns promoting medical treatments, surgeries, and hospital branding across multiple platforms.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Telecom Performance Marketing</h3>
+                    <span class="project-client">Company: ikonTel</span>
+                    <p>Generated global leads (India, Western, Middle East) for voice-bot and WhatsApp chatbot services via performance marketing.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Lead Gen Website</h3>
+                    <span class="project-client">Client: Babaria IP</span>
+                    <p>Developed a WordPress site for patenting services lead generation and managed Facebook ad campaigns to fill the pipeline.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills & Tools</h2>
+                <p>The technologies and methodologies I use to drive results.</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Core Competencies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SEO (On/Off/Technical)</span>
+                        <span class="skill-tag">PPC (Google/Meta/Bing)</span>
+                        <span class="skill-tag">Email Marketing</span>
+                        <span class="skill-tag">Content Marketing</span>
+                        <span class="skill-tag">Lead Generation</span>
+                        <span class="skill-tag">Analytics & Tracking</span>
+                        <span class="skill-tag">Graphic Designing</span>
+                        <span class="skill-tag">Conversion Optimization</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">WordPress / Elementor</span>
+                        <span class="skill-tag">GA4 / GSC / GTM</span>
+                        <span class="skill-tag">SEMrush / Ahrefs / Moz</span>
+                        <span class="skill-tag">HubSpot / Salesforce</span>
+                        <span class="skill-tag">Mailchimp / GetResponse</span>
+                        <span class="skill-tag">Zapier / Pabbly Connect</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">ChatGPT / AI Tools</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2>Education & Certifications</h2>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <h3>Bachelor of Mechanical Engineering</h3>
+                    <p>Jain College of Engineering, Belagavi</p>
+                    <p style="color: var(--accent); font-weight: 600;">Passed: July 2018</p>
+                </div>
+                <div class="edu-card">
+                    <h3>Upgrad Digital Marketing Certificate</h3>
+                    <p>Upgrad Digital Marketing Institute</p>
+                    <p style="color: var(--accent); font-weight: 600;">Jul 2018 - Feb 2019</p>
+                </div>
+                <div class="edu-card">
+                    <h3>Google Certifications</h3>
+                    <p>Digital Garage, Analytics (GA4), Search Ads, Display Ads</p>
+                </div>
+                <div class="edu-card">
+                    <h3>SEMRush SEO Certificate</h3>
+                    <p>Keyword research, LSI, and on-page optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Let's discuss how I can help scale your digital presence.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:venkateshbetageri6@gmail.com">venkateshbetageri6@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h4>Phone</h4>
+                    <a href="tel:+919980178055">+91 9980178055</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <h4>LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/venkatesh-betageri" target="_blank">Connect with me</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Location</h4>
+                    <p>Yelahanka, Bangalore, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Venkatesh Betageri. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        const html = document.documentElement;
+
+        // Check local storage for theme preference
+        if (localStorage.getItem('theme') === 'light') {
+            html.setAttribute('data-theme', 'light');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (html.getAttribute('data-theme') === 'light') {
+                html.removeAttribute('data-theme');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.setAttribute('data-theme', 'light');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
