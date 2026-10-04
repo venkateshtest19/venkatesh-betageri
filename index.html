@@ -36,9 +36,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         html { scroll-behavior: smooth; }
-        
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-primary);
@@ -47,7 +45,6 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Typography */
         h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; }
         h1 { font-size: 3rem; margin-bottom: 0.5rem; }
         h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--accent); }
@@ -56,11 +53,9 @@
         a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
         a:hover { color: var(--accent-hover); }
 
-        /* Layout */
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
         section { padding: 5rem 0; }
 
-        /* Navigation */
         nav {
             position: fixed; top: 0; width: 100%; z-index: 1000;
             background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px);
@@ -77,18 +72,10 @@
         .nav-links a { color: var(--text-secondary); font-weight: 500; font-size: 0.95rem; }
         .nav-links a:hover { color: var(--accent); }
         
-        .theme-toggle {
-            background: none; border: none; color: var(--text-primary);
-            font-size: 1.2rem; cursor: pointer;
-        }
-
+        .theme-toggle { background: none; border: none; color: var(--text-primary); font-size: 1.2rem; cursor: pointer; }
         .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
 
-        /* Hero Section */
-        .hero {
-            min-height: 100vh; display: flex; align-items: center;
-            padding-top: 80px;
-        }
+        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 80px; }
         .hero-content { max-width: 800px; }
         .hero-tag {
             display: inline-block; background: var(--bg-secondary);
@@ -97,7 +84,7 @@
             border: 1px solid var(--border);
         }
         .hero h1 span { color: var(--accent); }
-        .hero p { font-size: 1.25rem; max-width: 600px; margin-bottom: 2rem; }
+        .hero p { font-size: 1.15rem; max-width: 700px; margin-bottom: 2rem; }
         
         .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
         .btn {
@@ -110,11 +97,9 @@
         .btn-outline { background: transparent; color: var(--text-primary); border: 1px solid var(--border); }
         .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
-        /* Section Headers */
         .section-header { text-align: center; margin-bottom: 3rem; }
         .section-header p { max-width: 600px; margin: 0 auto; }
 
-        /* Experience Timeline */
         .timeline { position: relative; max-width: 800px; margin: 0 auto; }
         .timeline::before {
             content: ''; position: absolute; left: 20px; top: 0; bottom: 0;
@@ -135,10 +120,8 @@
         .timeline-card ul { padding-left: 1.2rem; color: var(--text-secondary); }
         .timeline-card li { margin-bottom: 0.5rem; }
 
-        /* Projects Grid */
         .projects-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;
         }
         .project-card {
             background: var(--bg-card); border: 1px solid var(--border);
@@ -149,7 +132,6 @@
         .project-client { font-size: 0.875rem; color: var(--accent); font-weight: 600; margin-bottom: 1rem; display: block; }
         .project-card p { font-size: 0.95rem; }
 
-        /* Skills */
         .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
         .skill-category h3 { margin-bottom: 1rem; color: var(--text-primary); }
         .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -159,7 +141,6 @@
             border: 1px solid var(--border);
         }
 
-        /* Education & Certs */
         .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
         .edu-card {
             background: var(--bg-card); border: 1px solid var(--border);
@@ -168,7 +149,14 @@
         .edu-card h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
         .edu-card p { font-size: 0.9rem; margin-bottom: 0; }
 
-        /* Contact */
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .info-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 1.5rem; text-align: center;
+        }
+        .info-card h4 { color: var(--accent); margin-bottom: 0.5rem; }
+        .info-card p { font-size: 0.9rem; margin: 0; }
+
         .contact-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem; max-width: 800px; margin: 0 auto;
@@ -183,13 +171,11 @@
         .contact-item h4 { margin-bottom: 0.5rem; color: var(--text-primary); }
         .contact-item a, .contact-item p { margin: 0; font-size: 0.95rem; }
 
-        /* Footer */
         footer {
             text-align: center; padding: 2rem 0; border-top: 1px solid var(--border);
             color: var(--text-secondary); font-size: 0.875rem;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             h1 { font-size: 2.25rem; }
             h2 { font-size: 1.75rem; }
@@ -233,14 +219,12 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <span class="hero-tag">Available for new opportunities</span>
+            <span class="hero-tag">Certified Digital Marketing Specialist</span>
             <h1>Hi, I'm <span>Venkatesh Betageri</span></h1>
-            <h2 style="font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Certified Digital Marketing Specialist</h2>
-            <p>6.5+ years of experience driving growth through SEO, Paid Ads, Email Marketing, and Analytics. I help businesses scale by crafting data-driven digital strategies that convert.</p>
+            <p>Results-driven specialist with 6.5+ years of experience orchestrating high-ROI, data-backed digital strategies across e-commerce, healthcare, telecom, education, and real estate. Proven expertise in managing large-scale annual ad budgets (₹12 Cr+) and leading cross-functional teams to deliver measurable business growth through end-to-end performance marketing, advanced SEO, and marketing automation.</p>
             <div class="btn-group">
                 <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get in Touch</a>
-                <!-- Replace 'resume.pdf' with your actual PDF file name in the root directory -->
-                <a href="resume.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-download"></i> Download Resume</a>
+                <a href="VENKATESH_BETAGERI_DMS.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-download"></i> Download Resume</a>
             </div>
         </div>
     </section>
@@ -250,10 +234,9 @@
         <div class="container">
             <div class="section-header">
                 <h2>About Me</h2>
-                <p>A passionate digital marketer with a proven track record of developing and executing successful strategies across technology, automotive, healthcare, and education sectors.</p>
             </div>
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p>Over the years, I have seamlessly navigated the intricate landscapes of digital marketing, producing a spectrum of content that ranges from insightful blog posts and persuasive copy to attention-grabbing social media content. I specialize in SEO, PPC, and marketing automation, leveraging AI tools to achieve maximum ROI with optimal efficiency.</p>
+                <p>I am highly proficient in multi-channel paid advertising (Google, Meta, LinkedIn, X, Bing, AdRoll, Propeller) covering Search, Display, Video, PMax, Demand Gen, and Sales campaigns. Adept at bridging technical and creative domains, I bring hands-on experience in web development (CMS & Custom), advanced SEO, and deep data analysis. I excel at designing multi-touch marketing automation workflows (Email, SMS, WhatsApp) and conducting comprehensive market research to optimize the entire customer journey, transforming analytics into actionable strategies that lower acquisition costs and scale lead generation.</p>
             </div>
         </div>
     </section>
@@ -271,12 +254,12 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">Feb 2026 - Present</div>
                     <div class="timeline-card">
-                        <h3>Freelance | Digital Marketing Professional</h3>
-                        <h4>Independent</h4>
+                        <h3>Digital Marketing Specialist</h3>
+                        <h4>Freelancing</h4>
                         <ul>
-                            <li>Provide end-to-end digital solutions encompassing web development, social media, and performance marketing.</li>
-                            <li>Execute targeted ad campaigns across Google and Meta to drive lead generation and maximize ROI.</li>
-                            <li>Implement marketing automation workflows and email sequences to nurture leads.</li>
+                            <li><strong>Healthcare & Education:</strong> Spearheaded multi-channel PPC and social media campaigns for hospitals and colleges to drive high-intent patient leads and systematically convert them into paid student enrollments.</li>
+                            <li><strong>Web Dev & Automation:</strong> Developed high-converting websites and landing pages, implementing automated lead-nurturing workflows (Email, SMS, WhatsApp) to streamline the customer journey.</li>
+                            <li><strong>Data Analytics & ROI:</strong> Managed large-scale ad budgets across Google, Meta, and other platforms, leveraging advanced analytics to continuously refine targeting, reduce CPA, and maximize overall ROI.</li>
                         </ul>
                     </div>
                 </div>
@@ -288,9 +271,9 @@
                         <h3>Digital Marketing Specialist</h3>
                         <h4>Manipal Academy of Higher Education</h4>
                         <ul>
-                            <li>Drove performance marketing campaigns (Google, Meta, LinkedIn) for 300+ academic programs.</li>
-                            <li>Managed end-to-end SEO strategy to boost organic visibility and applications.</li>
-                            <li>Analyzed campaign performance using GA4 and Meta Ads Manager to refine targeting and funnel conversion.</li>
+                            <li><strong>Performance Marketing:</strong> Spearheaded full-funnel paid campaigns (Google Search, PMax, Demand Gen, Meta) for 300+ academic programs, utilizing advanced audience targeting and A/B testing to maximize ROI.</li>
+                            <li><strong>SEO Strategy:</strong> Directed comprehensive SEO initiatives (technical audits, Core Web Vitals, schema markup, on-page optimization) using SEMrush and Ahrefs, resulting in measurable improvements in organic visibility.</li>
+                            <li><strong>Analytics & Automation:</strong> Leveraged GA4 and GTM for deep funnel analysis, while partnering with admissions to implement automated lead-nurturing workflows and promote university events.</li>
                         </ul>
                     </div>
                 </div>
@@ -300,11 +283,25 @@
                     <div class="timeline-date">Nov 2023 - Jul 2024</div>
                     <div class="timeline-card">
                         <h3>Digital Marketing Lead</h3>
-                        <h4>ikonTel Solutions</h4>
+                        <h4>IkonTel Solutions</h4>
                         <ul>
-                            <li>Managed a team of 8 professionals executing digital marketing for healthcare, tech, and hospitality clients.</li>
-                            <li>Acted as primary point of contact for 15+ clients, ensuring satisfaction and addressing needs.</li>
-                            <li>Conducted SEO and PPC campaigns for lead generation in medical treatments and telecom sectors.</li>
+                            <li><strong>Performance Marketing:</strong> Spearheaded full-funnel paid campaigns (Google, Meta, LinkedIn) to drive global B2B and B2C leads for core tech services like voice-bots and cloud telephony.</li>
+                            <li><strong>Healthcare Digital Strategy:</strong> Directed targeted lead generation and branding campaigns for a portfolio of 50+ hospital clients, driving high-intent patient acquisition for specialized treatments.</li>
+                            <li><strong>Web Dev, Content & SEO:</strong> Led end-to-end website planning and development, executing comprehensive SEO strategies to boost organic rankings and improve site conversion rates.</li>
+                            <li><strong>Team Leadership:</strong> Managed and mentored a cross-functional team of 12 professionals, bridging the gap between development, design, and marketing teams.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jul 2023 - Oct 2023</div>
+                    <div class="timeline-card">
+                        <h3>Skill Upgradation</h3>
+                        <h4>Aadme (Digital Marketing Course)</h4>
+                        <ul>
+                            <li><strong>Technical & Paid Media Mastery:</strong> Deepened hands-on expertise in web development, advanced SEO, and full-funnel paid advertising (Google & Meta Ads).</li>
+                            <li><strong>Analytics & Tracking:</strong> Mastered advanced analytics, conversion tracking setup, and data-driven campaign optimization to maximize overall marketing performance.</li>
                         </ul>
                     </div>
                 </div>
@@ -314,37 +311,38 @@
                     <div class="timeline-date">Jun 2021 - Jul 2023</div>
                     <div class="timeline-card">
                         <h3>Digital Marketing Executive</h3>
-                        <h4>Cumulations</h4>
+                        <h4>Cumulations Technologies</h4>
                         <ul>
-                            <li>Implemented SEO strategies leading to notable increases in organic traffic and rankings.</li>
-                            <li>Utilized Google and Facebook Ads for highly targeted campaigns, boosting traffic and ROI.</li>
-                            <li>Implemented email marketing automation systems resulting in substantial conversion growth.</li>
+                            <li><strong>End-to-End Execution:</strong> Solely managed and executed comprehensive digital marketing strategies from scratch, taking full ownership of the entire marketing lifecycle.</li>
+                            <li><strong>SEO, Content & Paid Ads:</strong> Directed organic growth initiatives via technical/on-page SEO and high-quality blogging, while managing targeted Google and Meta Ads for consistent lead generation.</li>
+                            <li><strong>Web & Social Management:</strong> Handled complete website management (content updates, UX improvements) and cross-platform social media strategies.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">Jul 2019 - May 2021</div>
+                    <div class="timeline-date">Sept 2019 - Jun 2021</div>
                     <div class="timeline-card">
                         <h3>Digital Marketing Executive</h3>
                         <h4>Brilliant Jobs Marketing Agency</h4>
                         <ul>
-                            <li>Conducted market research and developed marketing strategies for diverse clients.</li>
-                            <li>Created and managed Google Ads, Facebook Ads, and Email campaigns optimized for conversion.</li>
+                            <li><strong>Multi-Vertical Strategy:</strong> Managed digital marketing initiatives for a diverse portfolio of clients across education, IT services, e-commerce, and fitness verticals.</li>
+                            <li><strong>Paid Advertising & Web Content:</strong> Developed and optimized targeted Google and Meta Ads campaigns, while collaborating with teams to produce high-quality web copy and landing pages.</li>
+                            <li><strong>Analytics:</strong> Executed cross-platform social media strategies and continuously tracked campaign metrics to implement data-driven optimizations.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">Feb 2019 - Jun 2019</div>
+                    <div class="timeline-date">Jun 2019 - Aug 2019</div>
                     <div class="timeline-card">
                         <h3>Digital Marketing Intern</h3>
                         <h4>PluginHive Technologies</h4>
                         <ul>
-                            <li>Assisted in digital marketing campaigns, social media management, and SEO keyword research.</li>
-                            <li>Created and managed WordPress websites, configuring plugins and themes.</li>
+                            <li><strong>WordPress & SEO:</strong> Gained hands-on experience managing WordPress sites, configuring plugins, and supporting the SEO team with keyword research and content optimization.</li>
+                            <li><strong>Analytics & Reporting:</strong> Tracked campaign performance using analytics tools, generating structured reports for senior management to inform data-driven strategy adjustments.</li>
                         </ul>
                     </div>
                 </div>
@@ -358,33 +356,38 @@
         <div class="container">
             <div class="section-header">
                 <h2>Key Projects</h2>
-                <p>A glimpse of the impactful campaigns and websites I've delivered.</p>
+                <p>A glimpse of the impactful campaigns and strategies I've delivered.</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>E-Commerce Website & Ads</h3>
-                    <span class="project-client">Client: Sharada Sarees</span>
-                    <p>Developed a WooCommerce site for selling sarees online and executed initial Facebook ad campaigns to drive early sales.</p>
+                    <h3>Welfare Donation Campaign</h3>
+                    <span class="project-client">Client: Pyrpose (Swiss Client)</span>
+                    <p>Collaborated with the development team to execute targeted marketing campaigns aimed at generating donations and funding for African welfare projects.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Quick Commerce Campaign</h3>
+                    <h3>Real Estate Lead Generation</h3>
+                    <span class="project-client">Client: Top Shelf (US Client)</span>
+                    <p>Executed digital marketing and lead generation strategies for a US-based real estate construction company to drive property inquiries and brand visibility.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Quick Commerce Performance</h3>
                     <span class="project-client">Client: ClickHubli</span>
-                    <p>Generated 500+ orders during Valentine's week with a ROAS of 14 using highly targeted Meta ads for gifts, cakes, and flowers.</p>
+                    <p>Executed a high-impact Meta ads campaign for gifts and flowers, generating 500+ orders with a 14 ROAS during Valentine's week.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Healthcare Lead Generation</h3>
+                    <h3>Healthcare PPC Lead Gen</h3>
                     <span class="project-client">Clients: Invivo, BlueBliss, Punya</span>
-                    <p>Ran PPC lead generation campaigns promoting medical treatments, surgeries, and hospital branding across multiple platforms.</p>
+                    <p>Managed multi-platform PPC campaigns to drive high-intent patient leads for specialized medical treatments, surgeries, and overall hospital branding.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Telecom Performance Marketing</h3>
+                    <h3>Global Telecom Marketing</h3>
                     <span class="project-client">Company: ikonTel</span>
-                    <p>Generated global leads (India, Western, Middle East) for voice-bot and WhatsApp chatbot services via performance marketing.</p>
+                    <p>Spearheaded global performance marketing for voice-bot and chatbot services, generating qualified B2B leads across India, Western, and Middle Eastern markets.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Lead Gen Website</h3>
-                    <span class="project-client">Client: Babaria IP</span>
-                    <p>Developed a WordPress site for patenting services lead generation and managed Facebook ad campaigns to fill the pipeline.</p>
+                    <h3>EdTech Student Acquisition</h3>
+                    <span class="project-client">Company: Manipal Academy of Higher Education</span>
+                    <p>Worked on comprehensive PPC (Google, Meta, LinkedIn) and SEO strategies for 300+ academic programs, driving high-intent student applications and boosting organic visibility.</p>
                 </div>
             </div>
         </div>
@@ -394,41 +397,60 @@
     <section id="skills" style="background: var(--bg-secondary);">
         <div class="container">
             <div class="section-header">
-                <h2>Skills & Tools</h2>
-                <p>The technologies and methodologies I use to drive results.</p>
+                <h2>Skills & Expertise</h2>
             </div>
             <div class="skills-container">
                 <div class="skill-category">
                     <h3>Core Competencies</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">SEO (On/Off/Technical)</span>
-                        <span class="skill-tag">PPC (Google/Meta/Bing)</span>
-                        <span class="skill-tag">Email Marketing</span>
-                        <span class="skill-tag">Content Marketing</span>
+                        <span class="skill-tag">Performance Marketing</span>
+                        <span class="skill-tag">Paid Advertising (PPC)</span>
+                        <span class="skill-tag">SEO (Local, Technical, On/Off-page)</span>
                         <span class="skill-tag">Lead Generation</span>
-                        <span class="skill-tag">Analytics & Tracking</span>
-                        <span class="skill-tag">Graphic Designing</span>
-                        <span class="skill-tag">Conversion Optimization</span>
+                        <span class="skill-tag">Data Analysis & Analytics</span>
+                        <span class="skill-tag">Conversion Rate Optimization</span>
+                        <span class="skill-tag">Market & Audience Research</span>
+                        <span class="skill-tag">Content Marketing & Copywriting</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
+                    <h3>Platforms & Ads</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">WordPress / Elementor</span>
-                        <span class="skill-tag">GA4 / GSC / GTM</span>
-                        <span class="skill-tag">SEMrush / Ahrefs / Moz</span>
-                        <span class="skill-tag">HubSpot / Salesforce</span>
-                        <span class="skill-tag">Mailchimp / GetResponse</span>
-                        <span class="skill-tag">Zapier / Pabbly Connect</span>
-                        <span class="skill-tag">Canva</span>
-                        <span class="skill-tag">ChatGPT / AI Tools</span>
+                        <span class="skill-tag">Google Ads</span>
+                        <span class="skill-tag">Meta Ads</span>
+                        <span class="skill-tag">LinkedIn Ads</span>
+                        <span class="skill-tag">X (Twitter) Ads</span>
+                        <span class="skill-tag">Bing Ads</span>
+                        <span class="skill-tag">AdRoll</span>
+                        <span class="skill-tag">Propeller Ads</span>
+                        <span class="skill-tag">RichAds</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Technical & Automation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Web Development (CMS & Custom)</span>
+                        <span class="skill-tag">Email Marketing & Automation</span>
+                        <span class="skill-tag">SMS & WhatsApp Campaigns</span>
+                        <span class="skill-tag">Marketing Automation Workflows</span>
+                        <span class="skill-tag">Remarketing & Retargeting</span>
+                        <span class="skill-tag">Graphic Designing</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Time Management</span>
+                        <span class="skill-tag">Communication</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education & Certifications -->
+    <!-- Education, Certs, Industries & Clients -->
     <section id="education">
         <div class="container">
             <div class="section-header">
@@ -436,22 +458,41 @@
             </div>
             <div class="edu-grid">
                 <div class="edu-card">
-                    <h3>Bachelor of Mechanical Engineering</h3>
-                    <p>Jain College of Engineering, Belagavi</p>
-                    <p style="color: var(--accent); font-weight: 600;">Passed: July 2018</p>
+                    <h3>Bachelor of Engineering</h3>
+                    <p>Jain College of Engineering</p>
+                    <p style="color: var(--accent); font-weight: 600;">2013 - 2018</p>
                 </div>
                 <div class="edu-card">
-                    <h3>Upgrad Digital Marketing Certificate</h3>
-                    <p>Upgrad Digital Marketing Institute</p>
-                    <p style="color: var(--accent); font-weight: 600;">Jul 2018 - Feb 2019</p>
+                    <h3>Digital Marketing Course</h3>
+                    <p>UpGrad</p>
+                    <p style="color: var(--accent); font-weight: 600;">Jun 2018 - Feb 2019</p>
                 </div>
                 <div class="edu-card">
                     <h3>Google Certifications</h3>
-                    <p>Digital Garage, Analytics (GA4), Search Ads, Display Ads</p>
+                    <p>Digital Garage, Analytics, Search Ads, Display Ads</p>
                 </div>
                 <div class="edu-card">
                     <h3>SEMRush SEO Certificate</h3>
-                    <p>Keyword research, LSI, and on-page optimization.</p>
+                    <p>SEMRush</p>
+                </div>
+                <div class="edu-card">
+                    <h3>NCC "A", "B", and "C" Certificates</h3>
+                    <p>National Cadet Corps (NCC)</p>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Industries Served</h4>
+                    <p>E-Commerce, Healthcare, Telecom, Political Campaigns, Fitness & Nutrition, Real Estate, Hospitality, IT Services, Education, NGOs</p>
+                </div>
+                <div class="info-card">
+                    <h4>Key Clients</h4>
+                    <p>Sharada Sarees, Capital Quest, True Hope NGO, Dome Resort, BlueBliss Hospital, Invivo Aesthetics, Punya Hospital, IQH Healthcare, Pyrpose (Swiss), QA Circle, Programming LLC, Top Shelf (USA), Netradham NGO, Click Hubli, Cumulations, and more.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Languages</h4>
+                    <p>English, Hindi, Kannada, Marathi</p>
                 </div>
             </div>
         </div>
@@ -478,12 +519,12 @@
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
                     <h4>LinkedIn</h4>
-                    <a href="https://www.linkedin.com/in/venkatesh-betageri" target="_blank">Connect with me</a>
+                    <a href="https://www.linkedin.com/in/venkatesh-btgri" target="_blank">Connect with me</a>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h4>Location</h4>
-                    <p>Yelahanka, Bangalore, India</p>
+                    <i class="fas fa-globe"></i>
+                    <h4>Portfolio</h4>
+                    <a href="https://venkatesh-betageri.vercel.app" target="_blank">venkatesh-betageri.vercel.app</a>
                 </div>
             </div>
         </div>
@@ -493,6 +534,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Venkatesh Betageri. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">I hereby declare that all the details furnished above are true to the best of my knowledge.</p>
         </div>
     </footer>
 
@@ -502,7 +544,6 @@
         const themeIcon = themeToggle.querySelector('i');
         const html = document.documentElement;
 
-        // Check local storage for theme preference
         if (localStorage.getItem('theme') === 'light') {
             html.setAttribute('data-theme', 'light');
             themeIcon.classList.replace('fa-moon', 'fa-sun');
@@ -534,7 +575,6 @@
             }
         });
 
-        // Close mobile menu when a link is clicked
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
